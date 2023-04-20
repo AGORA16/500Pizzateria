@@ -52,22 +52,52 @@ h4{
     font-size: 35px;
 }
 #tdyspl{
-background-image: url(https://cdn1.vectorstock.com/i/thumbs/07/75/pizza-slice-vector-16800775.jpg);
+/* background-image: url(https://cdn1.vectorstock.com/i/thumbs/07/75/pizza-slice-vector-16800775.jpg); */
 height:500px ;
 margin: -8px;
 margin-bottom: 0px;
+animation-name: bgimg;
+animation-duration: 1s;    
+animation-delay: 0s;
+animation-iteration-count: infinite;
+animation-direction: alternate-reverse;
 }
 img[alt=bb]{
     height: 450px;
     width: 400px;
    margin: 20px 430px;
+   animation-name: tdyspl;
+   animation-duration: 2s;
+   animation-delay: 0s;
+   animation-direction: alternate-reverse;
+   animation-timing-function: ease;
+   animation-iteration-count: infinite;
 }
+@keyframes tdyspl {
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
 #tsp{
     margin-top: -10px;
     color: yellow;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-left: -730px;
 }
+@keyframes bgimg {
+    from{
+        background-image: url(https://cdn1.vectorstock.com/i/thumbs/07/75/pizza-slice-vector-16800775.jpg);
+        
+    }
+    to{
+        background-image: url(https://cdn.vectorstock.com/i/thumbs/06/98/pizza-doodle-icon-vector-17220698.jpg);
+    }
+}
+
 p{
     font-family: Arial, Helvetica, sans-serif;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -173,7 +203,7 @@ img[alt=logo2]{
 
 ul{
     display: inline-block;
-    width: 215px;
+    width: 210px;
     margin: 20px 20px;
     border: 2px solid white;
     padding: 20px;
@@ -192,6 +222,21 @@ img[alt^=soci]{
     height: 50px;
     width: 50px;
 }
+img[alt^=so]:hover{
+    animation-name: soci;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+}
+@keyframes soci {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 .mini{
     margin: 20px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -200,4 +245,20 @@ img[alt^=soci]{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     font-size: 12px;
     line-height: 20px;
+}
+#cpri{
+    background-color: darkslategray;
+    height: 50px;
+    width: 100%;
+}
+#lastpara{
+    display: inline-block;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0px 250px;
+}
+#gototop{
+    position: absolute;
+    right: 0px;
+    height: 50px;
 }
